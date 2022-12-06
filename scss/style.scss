@@ -146,6 +146,7 @@ body.lock {
    justify-content: space-between;
    @media (max-width: 991.98px) {
       min-height: 100px;
+      column-gap: 20px;
    }
    @media (max-width: 767.98px) {
       gap: 10px;
@@ -156,6 +157,9 @@ body.lock {
    display: flex;
    position: relative;
    z-index: 3;
+   @media (max-width: 991.98px) {
+      // max-width: 60px;
+   }
    @media (max-width: 767.98px) {
       max-width: 60px;
       margin-top: 10px;
@@ -204,13 +208,15 @@ body.lock {
 }
 
 .menu {
-   margin-right: 30px;
+   margin: 0 30px;
 }
 .menu__list {
    display: flex;
-   gap: 55px;
+   column-gap: 55px;
    position: relative;
    z-index: 4;
+   flex-wrap: wrap;
+   row-gap: 10px;
    @media (max-width: 991.98px) {
       gap: 20px;
    }
@@ -229,6 +235,7 @@ body.lock {
    font-size: 18px;
    color: $white;
    position: relative;
+   display: block;
    @media (max-width: 767.98px) {
       display: none;
    }
@@ -1888,6 +1895,18 @@ body.lock {
       color: #adc7da;
       transition: 0.3s all ease 0s;
    }
+   @media (max-width: 1199.98px) {
+      margin: 0 auto;
+   }
+   @media (max-width: 519.98px) {
+      width: 100%;
+      margin: 0;
+   }
+   @media (max-width: 399.98px) {
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: none;
+   }
 
    span {
       display: inline-block;
@@ -1901,13 +1920,8 @@ body.lock {
       }
       @media (max-width: 449.98px) {
          margin-left: 15px;
+         margin-right: 5px;
       }
-   }
-   @media (max-width: 1199.98px) {
-      margin: 0 auto;
-   }
-   @media (max-width: 519.98px) {
-      width: 100%;
    }
 }
 // ...........................................SELLERS...................................................
@@ -1922,12 +1936,15 @@ body.lock {
    padding-right: 28px;
    @media (max-width: 1199.98px) {
       background: #2e3140;
+      margin-left: 0;
+      margin-right: 0;
    }
 }
 .sellers__header {
    display: flex;
    justify-content: space-between;
    margin-bottom: 33px;
+   column-gap: 10px;
    // @media (max-width: 499.98px) {
    //    justify-content: flex-start;
    //    gap: 10px;

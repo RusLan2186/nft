@@ -240,6 +240,8 @@ body {
 @media (max-width: 991.98px) {
   .header__container {
     min-height: 100px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
 }
 @media (max-width: 767.98px) {
@@ -290,14 +292,17 @@ body {
 }
 
 .menu {
-  margin-right: 30px;
+  margin: 0 30px;
 }
 
 .menu__list {
   display: flex;
-  gap: 55px;
+  -moz-column-gap: 55px;
+       column-gap: 55px;
   position: relative;
   z-index: 4;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 @media (max-width: 991.98px) {
   .menu__list {
@@ -310,6 +315,7 @@ body {
   font-size: 18px;
   color: #ffffff;
   position: relative;
+  display: block;
 }
 @media (max-width: 767.98px) {
   .menu__link {
@@ -2197,6 +2203,24 @@ body {
   color: #adc7da;
   transition: 0.3s all ease 0s;
 }
+@media (max-width: 1199.98px) {
+  .price__btn {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 519.98px) {
+  .price__btn {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 399.98px) {
+  .price__btn {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: none;
+  }
+}
 .price__btn span {
   display: inline-block;
   background-color: #3e9ee2;
@@ -2211,16 +2235,7 @@ body {
 @media (max-width: 449.98px) {
   .price__btn span {
     margin-left: 15px;
-  }
-}
-@media (max-width: 1199.98px) {
-  .price__btn {
-    margin: 0 auto;
-  }
-}
-@media (max-width: 519.98px) {
-  .price__btn {
-    width: 100%;
+    margin-right: 5px;
   }
 }
 
@@ -2237,6 +2252,8 @@ body {
 @media (max-width: 1199.98px) {
   .sellers {
     background: #2e3140;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -2244,6 +2261,8 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 33px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 
 .sellers__title {
